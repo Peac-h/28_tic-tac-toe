@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tic Tac Toe, coded by the Peach." />
+    <meta
+      name="keywords"
+      content="HTML, CSS, SASS, Javascript, jQuery, Coding"
+    />
+    <meta name="author" content="the Peach" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" src="src/js/script.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="src/fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/fav/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+    <title>Tic Tac Toe</title>
+  </head>
+
+  <body>
+    <video
+      src="./src/assets/grid-82515.mp4"
+      muted
+      playsinline
+      autoplay
+      loop
+      id="bgVideo"
+    ></video>
+
+    <div class="app-wrapper">
+      <header>
+        <div class="score">
+          AI <span id="scoreAI">0</span> : <span id="scoreHuman">0</span> Human
+        </div>
+        <div class="author-logo">
+          <a href="https://github.com/Peac-h" target="_blank">P_</a>
+        </div>
+      </header>
+
+      <main>
+        <div class="player-turn-message">Your turn!</div>
+
+        <div class="board" id="gameBoard">
+          <div class="game-board-square" id="0"></div>
+          <div class="game-board-square tr-up" id="1"></div>
+          <div class="game-board-square tr-r" id="2"></div>
+
+          <div class="game-board-square" id="3"></div>
+          <div class="game-board-square min" id="4"></div>
+          <div class="game-board-square" id="5"></div>
+
+          <div class="game-board-square tr-l" id="6"></div>
+          <div class="game-board-square tr-down" id="7"></div>
+          <div class="game-board-square" id="8"></div>
+        </div>
+
+        <div class="AI-thinking-message hide">
+          <p class="AI-thinking-message__text">Let me think...</p>
+        </div>
+      </main>
+
+      <footer>
+        <div class="bg-video-control" id="bgVideoControl">
+          <button>
+            Stop The Video
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48"
+              viewBox="0 96 960 960"
+              width="48"
+            >
+              <path
+                d="M372 735h60V417h-60v318Zm156 0h60V417h-60v318ZM140 896q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680V316H140v520Zm0 0V316v520Z"
+              />
+            </svg>
+
+            <!-- Play The Video
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            viewBox="0 96 960 960"
+            width="48"
+          >
+            <path
+              d="m392 743 260-169-260-169v338ZM140 896q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680V316H140v520Zm0 0V316v520Z"
+            />
+          </svg> -->
+          </button>
+        </div>
+        <div class="author">
+          Coded by the
+          <a href="https://github.com/Peac-h" target="_blank">Peach.</a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- modals -->
+
+    <div class="modal hide" id="modalWin">
+      <div class="modal__message">
+        <p>Oh, you lost!</p>
+        <button class="new-game">Again?</button>
+      </div>
+    </div>
+
+    <div class="modal hide" id="modalLose">
+      <div class="modal__message">
+        <p>Don't know how, but you won!</p>
+        <button class="new-game">Again?</button>
+      </div>
+    </div>
+
+    <div class="modal hide" id="modalTie">
+      <div class="modal__message">
+        <p>It's a tie!</p>
+        <button class="new-game">Again?</button>
+      </div>
+    </div>
+  </body>
+</html>

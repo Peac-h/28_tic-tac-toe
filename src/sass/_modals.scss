@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  height: 51vh;
+  width: 100%;
+  background: rgba(16 18 27 / 90%);
+
+  display: grid;
+  place-items: center;
+
+  text-transform: uppercase;
+
+  &__message {
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+
+    text-shadow: 0 0 0.5em var(--col-light-blue);
+  }
+
+  button {
+    text-transform: uppercase;
+
+    border: 2px solid var(--col-violet);
+    border-radius: 1rem;
+
+    align-self: center;
+
+    &:hover {
+      box-shadow: var(--shadow-violet);
+      text-shadow: 0 0 0.5em var(--col-light-blue);
+    }
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

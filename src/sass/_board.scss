@@ -1,0 +1,81 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-content: center;
+  gap: 1rem;
+
+  .tr-l {
+    translate: -1.5rem;
+  }
+  .tr-r {
+    translate: 1.5rem;
+  }
+  .tr-up {
+    translate: 0 -1.5rem;
+  }
+  .tr-down {
+    translate: 0 1.5rem;
+  }
+  .min {
+    scale: 1.1;
+  }
+  .animation {
+    box-shadow: var(--shadow-v);
+  }
+
+  .game-board-square {
+    height: 9rem;
+    width: 10rem;
+
+    display: grid;
+    place-items: center;
+
+    border: 3px solid var(--col-violet);
+    border-radius: 1rem;
+
+    backdrop-filter: blur(5px);
+    background: #0004;
+  }
+
+  // x style
+  .game-board-square.x::before,
+  .game-board-square.x::after,
+  &.x .game-board-square:not(.x):not(.o):hover::before,
+  &.x .game-board-square:not(.x):not(.o):hover::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 5rem;
+  }
+  .game-board-square.x::before,
+  &.x .game-board-square:not(.x):not(.o):hover::before {
+    background: var(--col-blue);
+    box-shadow: var(--shadow-blue);
+    transform: rotate(45deg);
+  }
+  .game-board-square.x::after,
+  &.x .game-board-square:not(.x):not(.o):hover::after {
+    background: var(--col-blue);
+    transform: rotate(-45deg);
+  }
+  &.x .game-board-square:not(.x):not(.o):hover::before,
+  &.x .game-board-square:not(.x):not(.o):hover::after {
+    box-shadow: none;
+  }
+
+  // o style
+  &.o .game-board-square:not(.x):not(.o):hover::before,
+  .game-board-square.o::before {
+    content: "";
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: 0.8rem solid var(--col-yellow);
+    box-shadow: var(--shadow-yellow);
+  }
+  &.o .game-board-square:not(.x):not(.o):hover::before {
+    box-shadow: none;
+    opacity: 0.5;
+  }
+}

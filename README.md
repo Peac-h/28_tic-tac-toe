@@ -14,11 +14,11 @@ If it's the third move of the game, the computer checks if it has marked two squ
 
 ## Checkout The Live Demo
 
-[Tic Tac Toe]()
+[Tic Tac Toe](https://peac-h.github.io/28_tic-tac-toe/)
 
-![Tic Tac Toe - Desktop]()
+![Tic Tac Toe - Desktop](https://raw.githubusercontent.com/Peac-h/28_tic-tac-toe/main/Screen%20Shot%202023-05-07%20at%201.17.21%20PM.png)
 
-![Tic Tac Toe - Small Screen]()
+![Tic Tac Toe - Small Screen](https://raw.githubusercontent.com/Peac-h/28_tic-tac-toe/main/Screen%20Shot%202023-05-07%20at%201.18.38%20PM.png)
 
 ## Game Rules
 
